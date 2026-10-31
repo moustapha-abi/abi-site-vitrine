@@ -34,4 +34,16 @@
       document.getElementById('ok').style.display='block';
     });
   }
+
+  // Vidéo YouTube chargée au clic
+  document.querySelectorAll('.yt').forEach(function(b){
+    b.addEventListener('click',function(){
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube-nocookie.com/embed/'+b.getAttribute('data-id')+'?autoplay=1&rel=0';
+      f.title=b.getAttribute('aria-label');
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      f.allowFullscreen=true; f.referrerPolicy='strict-origin-when-cross-origin';
+      b.replaceWith(f);
+    });
+  });
 })();
