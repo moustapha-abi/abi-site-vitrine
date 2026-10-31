@@ -258,3 +258,12 @@ footer a:hover{color:#fff}
 .yt:hover .play{transform:translate(-50%,-50%) scale(1.08)}
 .yt .play svg{width:34px;height:34px;fill:#fff;margin-left:4px}
 .yt .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 22px 18px;text-align:left;color:#fff;font-weight:700;font-size:15px;background:linear-gradient(transparent,rgba(15,30,60,.85))}
+
+/* Vidéo Medicis : disposition inversée */
+.guide-grid.rev{grid-template-columns:1.15fr .85fr}
+@media(max-width:900px){.guide-grid.rev{grid-template-columns:1fr}.guide-grid.rev .video{order:2}}
+.guide-med{background:var(--fond);border-top:0}
+.guide-med .video::before{right:auto;left:-18px}
+.guide-med .yt .play{background:var(--bleu-medicis)}
+.guide-med .guide-points li::before{background:var(--bleu-medicis)}
+.guide + .guide{border-top:0}
